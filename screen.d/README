@@ -1,0 +1,4 @@
+These script go in /usr/share/ltsp/screen.d/ and can be used for "screens" in the lts.conf
+
+calibrate - run the 3M touch calibration.  use only with the RCFILE and CONFIGURE_X_COMMAND settings.
+

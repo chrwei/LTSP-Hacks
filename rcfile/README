@@ -1,0 +1,8 @@
+These files normally go in /etc/init.d/ but really can go wherever you want since you have to give the full path in the lts.conf
+
+rc.thin.config-x-tw - configures X and starts the 3M touch driver.  not actually an RCFILE, use with CONFIGURE_X_COMMAND=
+rc.thin.touch-tw - dumps calibration for 3M touch driver
+rc.thin.touch-serial - configures a serial evdev touch screen.  calibration taken from xinput_calibrator
+rc.thin.touch-usb - configures a usb evdev touch screen. calibration taken from xinput_calibrator
+rc.thin.ups-serial - configures a serial UPS on the thin client
+
