@@ -1,0 +1,20 @@
+#!/bin/bash
+
+/bin/cat << EOF > /usr/share/ltsp/xinitrc.d/I20-touchparam
+#attach serial microtouch
+/usr/bin/inputattach --daemon --mtouch /dev/$1
+#wait a bit for init
+/bin/sleep 1
+
+#setup touch params
+/usr/bin/xinput set-int-prop "MicroTouch Serial TouchScreen" "Evdev Axis Calibration" $2 $3 $4 $5 $6
+EOF
+
+if [ -n "${7}" ]; then
+	/bin/cat << EOF >> /usr/share/ltsp/xinitrc.d/I20-touchparam
+
+#swap axis
+/usr/bin/xinput set-int-prop "MicroTouch Serial TouchScreen" "Evdev Axes Swap" 8 1
+EOF
+fi
+

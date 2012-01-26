@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#this MAY be specific to the USB microtouch on the IT test bench as of 8/4/2011
+
+/bin/cat << EOF > /usr/share/ltsp/xinitrc.d/I20-touchparam
+#setup touch params
+/usr/bin/xinput set-int-prop $1 $2 $3 $4 $5 $6 $7
+EOF
+

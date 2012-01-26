@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/usr/share/ltsp/configure-x.sh
+/etc/init.d/TWDrvStartup start
+

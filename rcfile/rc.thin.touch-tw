@@ -1,0 +1,29 @@
+#!/bin/bash
+#for the official mictotouch driver
+
+/bin/cat << EOF > /opt/twscreen/data/TwConfig
+<Touch>
+	DriverScreenCount=255
+</Touch>
+<Displays>
+	<Display="$1">
+		DisplayLLX=$2
+		DisplayLLY=$3
+		DisplayOrientation=$4
+		DisplayScreen=$5
+		DisplayURX=$6
+		DisplayURY=$7
+	</Display>
+</Displays>
+<Framework>
+	FrameworkCopyright=2011
+	FrameworkVersion="7.13 Build 6"
+	SystemDefaultFile="/root/twscreen/TwFactory.cfg"
+</Framework>
+EOF
+
+#/usr/bin/touch /etc/X11/xorg.conf
+
+#/usr/share/ltsp/configure-x.sh
+#/etc/init.d/TWDrvStartup start
+
